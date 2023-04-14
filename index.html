@@ -14,6 +14,8 @@
           <h1>Invoice Creator</h1>
           <p>Thanks for choosing GoodCorp, LLC!</p>
         </header>
+
+        <!-- invoice inputs -->
         <div class="inner-container">
           <div class="item-input-box">
             <input
@@ -39,25 +41,27 @@
               class="input-currency"
               placeholder="Amount"
             />
+            <input
+              type="number"
+              name="input-quantity"
+              id="input-quantity"
+              class="input-quantity"
+              placeholder="Qty"
+            />
             <button id="add-inputs-btn" class="add-inputs">+</button>
           </div>
-          <!-- OUTPUT BOXES -->
-          <div class="item-output-box">
-            <div class="item-col">
-              <h3>Item</h3>
-              <div id="item-output">
-                <!-- item output rendered by javascript -->
-              </div>
-            </div>
 
-            <!-- cost column -->
-            <div class="costs-col">
-              <h3>Total</h3>
-              <div id="cost-output">
-                <!-- item total rendered by javascript -->
-              </div>
-            </div>
+          <!-- OUTPUT BOX-->
+          <div class="top-headlines">
+            <h3>Item</h3>
+            <h3>Qty</h3>
+            <h3>Item Cost</h3>
+            <h3>Total</h3>
           </div>
+          <div id="item-output">
+            <!-- item output rendered by javascript -->
+          </div>
+
           <!-- total summary box -->
           <div class="total-summary-box">
             <div class="notes-col">
