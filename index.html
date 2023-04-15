@@ -14,7 +14,215 @@
           <h1>Invoice Creator</h1>
           <p>Thanks for choosing GoodCorp, LLC!</p>
         </header>
+        <!-- modal section -->
+        <div class="modal-container">
+          <div class="inner-modal-container">
+            <h1>Welcome!</h1>
+            <h3>Invoice Creator</h3>
+            <p>
+              Please complete the fields below to help start you off building
+              your new invoice
+            </p>
+            <div class="modal-inputs-1">
+              <!-- invoice number input -->
+              <div class="flex-inputs">
+                <label for="input-invoice-number">Invoice Number:</label>
+                <input
+                  type="number"
+                  name="input-invoice-number"
+                  id="input-invoice-number"
+                  class="modal-input-field"
+                  placeholder="Enter invoice number"
+                  title="Invoice Number"
+                />
+              </div>
+              <!-- business (sender) name input -->
+              <div class="flex-inputs">
+                <label for="input-business-name">Your Business Name:</label>
+                <input
+                  type="text"
+                  name="input-business-name"
+                  id="input-business-name"
+                  class="modal-input-field"
+                  placeholder="Enter your business name"
+                  title="Your Business Name"
+                />
+              </div>
 
+              <!-- enter issue date -->
+              <div class="flex-inputs">
+                <label for="input-issue-date">Issue Date:</label>
+                <input
+                  type="date"
+                  name="input-issue-date"
+                  id="input-issue-date"
+                  class="modal-input-field"
+                  placeholder="Enter issue date"
+                  title="Issue Date"
+                />
+              </div>
+              <!-- enter due date -->
+              <div class="flex-inputs">
+                <label for="input-due-date">Due Date:</label>
+                <input
+                  type="date"
+                  name="input-due-date"
+                  id="input-due-date"
+                  class="modal-input-field"
+                  placeholder="Enter due date"
+                  title="Due Date"
+                />
+              </div>
+            </div>
+            <!-- USER ADDRESS DETAILS -->
+            <h3>Your Address</h3>
+            <div class="modal-inputs-2">
+              <!-- Your BUSINESS full name -->
+              <div class="flex-inputs">
+                <label for="input-sender-name">Your Name:</label>
+                <input
+                  type="text"
+                  name="input-sender-name"
+                  id="input-sender-name"
+                  class="modal-input-field"
+                  placeholder="Enter your name"
+                  title="Your Name"
+                />
+              </div>
+              <!-- enter number & street name -->
+              <div class="flex-inputs">
+                <label for="input-sender-street">Your Street Number:</label>
+                <input
+                  type="text"
+                  name="input-sender-street"
+                  id="input-sender-street"
+                  class="modal-input-field"
+                  placeholder="Enter number & street"
+                  title="Your Street Number"
+                />
+              </div>
+              <!-- enter town/city name -->
+              <div class="flex-inputs">
+                <label for="input-sender-city">Your Town/City:</label>
+                <input
+                  type="text"
+                  name="input-sender-city"
+                  id="input-sender-city"
+                  class="modal-input-field"
+                  placeholder="Enter town/city"
+                  title="Your Town/City"
+                />
+              </div>
+              <!-- enter postcode/zip-code -->
+              <div class="flex-inputs">
+                <label for="input-sender-postcode">Your Post/Zip Code:</label>
+                <input
+                  type="text"
+                  name="input-sender-postcode"
+                  id="input-sender-postcode"
+                  class="modal-input-field"
+                  placeholder="Enter post/zip code"
+                  title="Your Post/Zip Code"
+                />
+              </div>
+            </div>
+            <!-- ADDRESSEE DETAILS -->
+            <h3>Addressee's details</h3>
+
+            <div class="modal-inputs-3">
+              <!-- ADDRESSEE'S/BUSINESS full name -->
+              <div class="flex-inputs">
+                <label for="input-addressee-name">Addressee's Name:</label>
+                <input
+                  type="text"
+                  name="input-addressee-name"
+                  id="input-addressee-name"
+                  class="modal-input-field"
+                  placeholder="Enter addressee's name"
+                  title="Addressee's Name"
+                />
+              </div>
+
+              <!-- enter number & street name -->
+              <div class="flex-inputs">
+                <label for="input-number-street"
+                  >Addressee Street number:</label
+                >
+                <input
+                  type="text"
+                  name="input-number-street"
+                  id="input-number-street"
+                  class="modal-input-field"
+                  placeholder="Enter number & street"
+                  title="Addressee Street number"
+                />
+              </div>
+
+              <!-- enter town/city name -->
+              <div class="flex-inputs">
+                <label for="input-city-name">Addressee Town/City:</label>
+                <input
+                  type="text"
+                  name="input-city-name"
+                  id="input-city-name"
+                  class="modal-input-field"
+                  placeholder="Enter town/city"
+                  title="Addressee Town/City"
+                />
+              </div>
+
+              <!-- enter postcode/zip-code -->
+              <div class="flex-inputs">
+                <label for="input-postcode">Addressee Post/Zip Code:</label>
+                <input
+                  type="text"
+                  name="input-postcode"
+                  id="input-postcode"
+                  class="modal-input-field"
+                  placeholder="Enter post/zip code"
+                  title="Addressee Post/Zip Code"
+                />
+              </div>
+            </div>
+            <h4>Fiscal/legal details (optional)</h4>
+            <!-- fiscal/legal details -->
+            <div class="modal-inputs-4">
+              <div class="flex-inputs">
+                <label for="input-tax-percentage">Tax Percentage %:</label>
+                <input
+                  type="number"
+                  name="input-tax-percentage"
+                  id="input-tax-percentage"
+                  class="modal-input-field"
+                  placeholder="Enter tax %"
+                  title="Tax Percentage %"
+                />
+              </div>
+
+              <!-- terms and condition link -->
+              <div class="flex-inputs">
+                <label for="input-t&c-link">Terms & Conditions link:</label>
+                <input
+                  type="url"
+                  name="input-t&c-link"
+                  id="input-t&c-link"
+                  class="modal-input-field"
+                  placeholder="Enter terms & conditions link"
+                  title="Terms & Conditions link"
+                />
+              </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <div class="modal-button-box">
+              <button class="submit-details-btn" id="submit-details">
+                Submit Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN USER SCREEN -->
         <!-- invoice inputs -->
         <div class="inner-container">
           <div class="item-input-box">

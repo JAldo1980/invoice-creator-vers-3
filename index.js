@@ -1,3 +1,21 @@
+import {
+  submitDetails,
+  inputInvoiceNumber,
+  inputBusinessName,
+  inputIssueDate,
+  inputDueDate,
+  inputSenderName,
+  inputSenderStreet,
+  inputSenderCity,
+  inputSenderPostcode,
+  inputAddresseeName,
+  inputNumberStreet,
+  inputCityName,
+  inputPostcode,
+  inputTaxPercentage,
+  inputTCLink,
+} from "./modal.js";
+
 const addInputsBtn = document.getElementById("add-inputs-btn");
 // output variables
 const itemOutput = document.getElementById("item-output");
@@ -83,34 +101,3 @@ function generateRandomID() {
 
   return id;
 }
-
-// MODAL SECTION
-
-mockText.innerHTML = `
-<!-- user inputs 1 -->
-<div class="user-details-container">
-  <div id="invoice-number">
-    <!-- rendered by javascript -->
-    <p>Invoice Number: 001</p>
-  </div>
-  <div id="issue-date">
-    <!-- rendered by javascript -->
-    <p>Issue Date: 20/04/23</p>
-  </div>
-  <div id="due-date">
-    <!-- rendered by javascript -->
-    <p><strong>Due Date: 14/05/23</strong></p>
-  </div>
-</div>
-<!-- user inputs 2 -->
-<div class="user-details-container">
-  <div id="sender-address">
-    <!-- rendered by javascript -->
-    <p>Senders Address</p>
-  </div>
-  <div id="recipient-address">
-    <!-- rendered by javascript -->
-    <p>Recipient Address</p>
-  </div>
-</div>
-`;

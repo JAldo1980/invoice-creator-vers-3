@@ -88,8 +88,8 @@ select {
 .container {
   margin: 0 auto;
   max-width: 1000px;
-
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 .inner-container {
@@ -309,4 +309,75 @@ div:nth-child(3) {
   margin-top: 1em;
   display: flex;
   justify-content: end;
+}
+
+/* modal section */
+
+.modal-container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: lightblue;
+  padding: 1.5em;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.inner-modal-container h1,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
+.inner-modal-container h1,
+h3 {
+  line-height: 1;
+}
+
+.inner-modal-container h1 {
+  font-size: 4rem;
+}
+
+.inner-modal-container h3 {
+  margin-top: 1em;
+  font-size: 2rem;
+}
+
+.inner-modal-container h4 {
+  margin-top: 3em;
+}
+
+.inner-modal-container p {
+  margin-top: 1em;
+}
+
+/* modal section 1 */
+
+.modal-inputs-1,
+.modal-inputs-2,
+.modal-inputs-3,
+.modal-inputs-4 {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.modal-button-box {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-details-btn {
+  margin-top: 3em;
+  padding: 0.5em 2em;
+}
+
+.flex-inputs {
+  display: flex;
+  flex-direction: column;
 }
