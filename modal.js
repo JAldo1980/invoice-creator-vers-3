@@ -18,8 +18,100 @@ const submitDetails = document.getElementById("submit-details");
 // MODAL SECTION
 
 submitDetails.addEventListener("click", function () {
-  console.log("click");
-  console.log(inputInvoiceNumber.value);
+  // local storage - save time repeating form fill
+  localStorage.setItem("invoiceNumber", inputInvoiceNumber.value);
+  localStorage.setItem("businessName", inputBusinessName.value);
+  localStorage.setItem("issueDate", inputIssueDate.value);
+  localStorage.setItem("dueDate", inputDueDate.value);
+  localStorage.setItem("senderName", inputSenderName.value);
+  localStorage.setItem("senderStreet", inputSenderStreet.value);
+  localStorage.setItem("senderCity", inputSenderCity.value);
+  localStorage.setItem("senderPostcode", inputSenderPostcode.value);
+  localStorage.setItem("addresseeName", inputAddresseeName.value);
+  localStorage.setItem("numberStreet", inputNumberStreet.value);
+  localStorage.setItem("cityName", inputCityName.value);
+  localStorage.setItem("postcode", inputPostcode.value);
+  localStorage.setItem("taxPercentage", inputTaxPercentage.value);
+  localStorage.setItem("tcLink", inputTCLink.value);
+
+  document.getElementById("user-input-el").innerHTML = `
+      <!-- user inputs 1 -->
+      <div class="user-details-container">
+        <div id="invoice-number">
+          <p><strong>Invoice Number: </strong>${
+            localStorage.getItem("invoiceNumber") || inputInvoiceNumber.value
+          }</p>
+        </div>
+        <div id="issue-date">
+          <!-- rendered by javascript -->
+          <p><strong>Issue Date: </strong>${
+            localStorage.getItem("issueDate") || inputIssueDate.value
+          }</p>
+        </div>
+        <div id="due-date">
+          <!-- rendered by javascript -->
+          <p><strong><span class="red">Due Date: </span> ${
+            localStorage.getItem("dueDate") || inputDueDate.value
+          }</strong></p>
+        </div>
+      </div>
+      <!-- user inputs 2 -->
+      <div class="user-details-container">
+        <div id="sender-address">
+        <h4><strong>Correspondence Address:</strong></h4>
+          <p>${localStorage.getItem("senderName") || inputSenderName.value}</p>
+          <p>${
+            localStorage.getItem("senderStreet") || inputSenderStreet.value
+          }</p>
+          <p>${localStorage.getItem("senderCity") || inputSenderCity.value}</p>
+          <p>${
+            localStorage.getItem("senderPostcode") || inputSenderPostcode.value
+          }</p>
+         
+        </div>
+        <div id="recipient-address">
+        <h4><strong>Recipient Address:</strong></h4>
+         <p>${
+           localStorage.getItem("addresseeName") || inputAddresseeName.value
+         }</p>
+         <p>${
+           localStorage.getItem("numberStreet") || inputNumberStreet.value
+         }</p>
+         <p>${localStorage.getItem("cityName") || inputCityName.value}</p>
+         <p>${localStorage.getItem("postcode") || inputPostcode.value}</p>
+        </div>
+      </div>
+      <!-- user inputs 3 -->
+      <div class="fiscal-legal-container">
+        <div><strong>Tax Percentage:</strong> ${
+          localStorage.getItem("taxPercentage") || inputTaxPercentage.value
+        }%</div>
+      
+        <div class="tc-link"><strong>Terms & Conditions:</strong> <a href ="${
+          localStorage.getItem("tcLink") || inputTCLink.value
+        }" target=”_blank”>${inputTCLink.value}</a></div>
+      </div>
+      `;
+  console.log("click works!");
+  document.querySelector(".modal-container ").style.display = "none";
+});
+
+// populate form fields with saved data on page load
+window.addEventListener("load", function () {
+  inputInvoiceNumber.value = localStorage.getItem("invoiceNumber");
+  inputBusinessName.value = localStorage.getItem("businessName");
+  inputIssueDate.value = localStorage.getItem("issueDate");
+  inputDueDate.value = localStorage.getItem("dueDate");
+  inputSenderName.value = localStorage.getItem("senderName");
+  inputSenderStreet.value = localStorage.getItem("senderStreet");
+  inputSenderCity.value = localStorage.getItem("senderCity");
+  inputSenderPostcode.value = localStorage.getItem("senderPostcode");
+  inputAddresseeName.value = localStorage.getItem("addresseeName");
+  inputNumberStreet.value = localStorage.getItem("numberStreet");
+  inputCityName.value = localStorage.getItem("cityName");
+  inputPostcode.value = localStorage.getItem("postcode");
+  inputTaxPercentage.value = localStorage.getItem("taxPercentage");
+  inputTCLink.value = localStorage.getItem("tcLink");
 });
 
 // exporting varibales
@@ -41,31 +133,9 @@ export {
   inputTCLink,
 };
 
-// mockText.innerHTML = `
-// <!-- user inputs 1 -->
-// <div class="user-details-container">
-//   <div id="invoice-number">
-//   inputInvoiceNumber.value
-//     <p>Invoice Number: 001</p>
-//   </div>
-//   <div id="issue-date">
-//     <!-- rendered by javascript -->
-//     <p>Issue Date: 20/04/23</p>
-//   </div>
-//   <div id="due-date">
-//     <!-- rendered by javascript -->
-//     <p><strong>Due Date: 14/05/23</strong></p>
-//   </div>
-// </div>
-// <!-- user inputs 2 -->
-// <div class="user-details-container">
-//   <div id="sender-address">
-//     <!-- rendered by javascript -->
-//     <p>Senders Address</p>
-//   </div>
-//   <div id="recipient-address">
-//     <!-- rendered by javascript -->
-//     <p>Recipient Address</p>
-//   </div>
-// </div>
-// `;
+{
+  /* <div>
+    <strong>Terms & Conditions:</strong> ${
+    localStorage.getItem("tcLink") || inputTCLink.value
+  }</div> */
+}

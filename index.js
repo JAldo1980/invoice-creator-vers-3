@@ -79,8 +79,17 @@ addInputsBtn.addEventListener("click", function () {
     totalAmount += item.amount * item.quantity;
   });
 
+  // add tax amount to total amount
+  document.getElementById("input-tax-percentage");
+  let taxAmount = totalAmount * (inputTaxPercentage.value / 100);
+  totalAmount += taxAmount;
+
   totalOutput.innerHTML = `
-    <div class="total-amount-el">${totalAmount}</div>
+    <div class="total-amount-box">
+      <div class="total-amount-el"><strong>${currency} ${totalAmount}</strong></div>
+    
+      <div><p>(Including ${inputTaxPercentage.value}% Tax rate)</p></div>
+    <div>
   `;
 
   // render note
